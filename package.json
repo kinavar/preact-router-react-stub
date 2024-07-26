@@ -1,7 +1,7 @@
 {
 	"name": "preact-router-react-stub",
 	"amdName": "preactRouterReactStub",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Connect your components up to that address bar.",
 	"main": "dist/preact-router.js",
 	"module": "dist/preact-router.module.js",
@@ -32,7 +32,6 @@
 		"fix": "npm run lint -- --fix",
 		"test:unit": "karmatic",
 		"test:ts": "tsc -p ./test",
-		"prepublishOnly": "npm-run-all build test",
 		"release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
 		"format": "prettier --write ."
 	},
