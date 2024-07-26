@@ -1,6 +1,6 @@
 {
-	"name": "preact-router",
-	"amdName": "preactRouter",
+	"name": "preact-router-react-stub",
+	"amdName": "preactRouterReactStub",
 	"version": "4.1.2",
 	"description": "Connect your components up to that address bar.",
 	"main": "dist/preact-router.js",
@@ -48,8 +48,8 @@
 	],
 	"author": "Jason Miller <jason@developit.ca>",
 	"license": "MIT",
-	"repository": "preactjs/preact-router",
-	"homepage": "https://github.com/preactjs/preact-router",
+	"repository": "preactjs/preact-router-react-stub",
+	"homepage": "https://github.com/kinavar/preact-router-react-stub",
 	"eslintConfig": {
 		"extends": "preact",
 		"rules": {
@@ -94,8 +94,8 @@
 		"microbundle": "^0.14.2",
 		"mocha": "^5.2.0",
 		"npm-run-all": "^3.0.0",
-		"preact": "^10.16.0",
 		"prettier": "^2.3.2",
+		"react": "^18.3.1",
 		"sinon": "^7.1.0",
 		"sinon-chai": "^3.7.0",
 		"typescript": "^4.9.5",

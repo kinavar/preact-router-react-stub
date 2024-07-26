@@ -1,11 +1,12 @@
-import {
-	h,
+import React, {
 	cloneElement,
 	Component,
-	toChildArray,
-	createContext
-} from 'preact';
-import { useContext, useState, useEffect } from 'preact/hooks';
+	Children,
+	createContext,
+	useContext,
+	useState,
+	useEffect
+} from 'react';
 import { exec, prepareVNodeForRanking, assign, pathRankSort } from './util';
 
 const EMPTY = {};
@@ -168,7 +169,7 @@ assign(RouterProto, {
 
 	/** Check if the given URL can be matched against any children */
 	canRoute(url) {
-		const children = toChildArray(this.props.children);
+		const children = Children.toArray(this.props.children);
 		return this._getMatchingChild(children, url) !== undefined;
 	},
 
@@ -225,7 +226,7 @@ assign(RouterProto, {
 	render({ children, onChange }, { url }) {
 		let ctx = this._contextValue;
 
-		let active = this._getMatchingChild(toChildArray(children), url);
+		let active = this._getMatchingChild(Children.toArray(children), url);
 		let matches, current;
 		if (active) {
 			matches = active[1];
