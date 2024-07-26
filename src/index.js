@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React, {
+	createElement,
 	cloneElement,
 	Component,
 	Children,
@@ -269,9 +271,9 @@ assign(RouterProto, {
 	}
 });
 
-const Link = props => h('a', assign({ onClick: delegateLinkHandler }, props));
+const Link = props => createElement('a', assign({ onClick: delegateLinkHandler }, props));
 
-const Route = props => h(props.component, props);
+const Route = props => createElement(props.component, props);
 
 export { getCurrentUrl, route, Router, Route, Link, exec, useRouter };
 export default Router;
