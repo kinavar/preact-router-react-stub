@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, {
+import {
 	createElement,
 	cloneElement,
 	Component,

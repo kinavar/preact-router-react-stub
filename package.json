@@ -1,7 +1,7 @@
 {
 	"name": "preact-router-react-stub",
 	"amdName": "preactRouterReactStub",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Connect your components up to that address bar.",
 	"main": "dist/preact-router.js",
 	"module": "dist/preact-router.module.js",
@@ -79,7 +79,7 @@
 		"arrowParens": "avoid"
 	},
 	"peerDependencies": {
-		"preact": ">=10"
+		"react": "^18.3.1"
 	},
 	"devDependencies": {
 		"@babel/plugin-transform-react-jsx": "^7.9.1",
@@ -95,7 +95,6 @@
 		"mocha": "^5.2.0",
 		"npm-run-all": "^3.0.0",
 		"prettier": "^2.3.2",
-		"react": "^18.3.1",
 		"sinon": "^7.1.0",
 		"sinon-chai": "^3.7.0",
 		"typescript": "^4.9.5",
