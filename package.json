@@ -1,7 +1,7 @@
 {
 	"name": "preact-router-react-stub",
 	"amdName": "preactRouterReactStub",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Connect your components up to that address bar.",
 	"main": "dist/preact-router.js",
 	"module": "dist/preact-router.module.js",

@@ -216,7 +216,7 @@ assign(RouterProto, {
 	},
 
 	_getMatchingChild(children, url) {
-		children = children.filter(prepareVNodeForRanking).sort(pathRankSort);
+		children = [...children].filter(prepareVNodeForRanking).sort(pathRankSort);
 		for (let i = 0; i < children.length; i++) {
 			let vnode = children[i];
 			let matches = exec(url, vnode.props.path, vnode.props);
