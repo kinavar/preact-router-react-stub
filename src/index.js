@@ -224,8 +224,10 @@ assign(RouterProto, {
 		}
 	},
 
-	render({ children, onChange }, { url }) {
+	render() {
 		let ctx = this._contextValue;
+		const { children, onChange } = this.props;
+		const { url } = this.state;
 
 		let active = this._getMatchingChild(Children.toArray(children), url);
 		let matches, current;
