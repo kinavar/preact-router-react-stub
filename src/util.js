@@ -56,9 +56,10 @@ export function pathRankSort(a, b) {
 
 // filter out VNodes without attributes (which are unrankeable), and add `index`/`rank` properties to be used in sorting.
 export function prepareVNodeForRanking(vnode, index) {
-	vnode.index = index;
-	vnode.rank = rankChild(vnode);
-	return vnode.props;
+	let newNode = {...vnode};
+	newNode.index = index;
+	newNode.rank = rankChild(vnode);
+	return newNode.props;
 }
 
 export function segmentize(url) {
