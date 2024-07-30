@@ -228,6 +228,12 @@ assign(RouterProto, {
 		let ctx = this._contextValue;
 		const { children, onChange } = this.props;
 		const { url } = this.state;
+		console.log({
+			ctx,
+			url,
+			children,
+			onChange
+		})
 
 		let active = this._getMatchingChild(Children.toArray(children), url);
 		let matches, current;
@@ -266,9 +272,7 @@ assign(RouterProto, {
 			}
 		}
 
-		return (
-			<RouterContext.Provider value={ctx}>{current}</RouterContext.Provider>
-		);
+		return <RouterContext.Provider value={ctx}>{current}</RouterContext.Provider>
 	}
 });
 
