@@ -25,7 +25,7 @@
 		"./match/package.json": "./match/package.json"
 	},
 	"scripts": {
-		"build": "microbundle -f es --no-generateTypes && microbundle src/cjs.js -f cjs,umd --no-generateTypes && (cd match && npm run build)",
+		"build": "microbundle -f es --no-generateTypes --jsx React.createElement && microbundle src/cjs.js -f cjs,umd --no-generateTypes && (cd match && npm run build)",
 		"postbuild": "cp dist/preact-router.module.js dist/preact-router.mjs && cp match/index.module.js match/index.mjs",
 		"test": "npm-run-all lint build test:unit test:ts",
 		"lint": "eslint src test",

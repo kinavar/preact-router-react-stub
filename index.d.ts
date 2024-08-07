@@ -1,4 +1,4 @@
-import * as preact from 'preact';
+import React from 'react';
 
 export function route(url: string, replace?: boolean): boolean;
 export function route(options: { url: string; replace?: boolean }): boolean;
@@ -21,7 +21,7 @@ export interface CustomHistory {
 
 export interface RoutableProps {
 	path?: string;
-	default?: boolean | preact.JSX.SignalLike<boolean | undefined>;
+	default?: boolean | React.JSX.SignalLike<boolean | undefined>;
 }
 
 export interface RouterOnChangeArgs<
@@ -33,8 +33,8 @@ export interface RouterOnChangeArgs<
 	router: Router;
 	url: string;
 	previous?: string;
-	active: preact.VNode[];
-	current: preact.VNode;
+	active: React.VNode[];
+	current: React.VNode;
 	path: string | null;
 	matches: RouteParams;
 }
@@ -51,15 +51,15 @@ export interface RouterProps<
 	onChange?: (args: RouterOnChangeArgs<RouteParams>) => void;
 }
 
-export class Router extends preact.Component<RouterProps, {}> {
+export class Router extends React.Component<RouterProps, {}> {
 	canRoute(url: string): boolean;
 	routeTo(url: string): boolean;
-	render(props: RouterProps, {}): preact.VNode;
+	render(props: RouterProps, {}): React.VNode;
 }
 
 type AnyComponent<Props> =
-	| preact.FunctionalComponent<Props>
-	| preact.ComponentConstructor<Props, any>;
+	| React.FunctionalComponent<Props>
+	| React.ComponentConstructor<Props, any>;
 
 export interface RouteProps<Props> extends RoutableProps {
 	component: AnyComponent<Props>;
@@ -67,11 +67,11 @@ export interface RouteProps<Props> extends RoutableProps {
 
 export function Route<Props>(
 	props: RouteProps<Props> & Partial<Props>
-): preact.VNode;
+): React.VNode;
 
 export function Link(
-	props: preact.JSX.HTMLAttributes<HTMLAnchorElement>
-): preact.VNode;
+	props: React.JSX.HTMLAttributes<HTMLAnchorElement>
+): React.VNode;
 
 export function useRouter<
 	RouteParams extends Record<string, string | undefined> | null = Record<
@@ -86,7 +86,7 @@ export function useRouter<
 	) => boolean
 ];
 
-declare module 'preact' {
+declare module 'react' {
 	export interface Attributes extends RoutableProps {}
 }
 

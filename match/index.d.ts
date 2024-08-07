@@ -1,16 +1,16 @@
-import * as preact from 'preact';
+import React from 'react';
 
 import { Link as StaticLink, RoutableProps } from '..';
 
-export class Match extends preact.Component<RoutableProps, {}> {
-	render(): preact.VNode;
+export class Match extends React.Component<RoutableProps, {}> {
+	render(): React.VNode;
 }
 
-export interface LinkProps extends preact.JSX.HTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps extends React.JSX.HTMLAttributes<HTMLAnchorElement> {
 	activeClassName?: string;
-	children?: preact.ComponentChildren;
+	children?: React.ComponentChildren;
 }
 
-export function Link(props: LinkProps): preact.VNode;
+export function Link(props: LinkProps): React.VNode;
 
 export default Match;

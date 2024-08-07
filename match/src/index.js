@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import { Link as StaticLink, exec, useRouter } from 'preact-router';
+import { Link as StaticLink, exec, useRouter } from 'preact-router-react-stub';
 
 export function Match(props) {
 	const router = useRouter()[0];

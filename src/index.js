@@ -1,8 +1,8 @@
 import {
-	createElement,
 	cloneElement,
-	Component,
 	Children,
+	Component,
+	createElement,
 	createContext,
 	useContext,
 	useState,
@@ -143,10 +143,6 @@ function initEventListeners() {
 	addEventListener('click', delegateLinkHandler);
 }
 
-/**
- * @class
- * @this {import('preact').Component}
- */
 function Router(props) {
 	if (props.history) {
 		customHistory = props.history;
@@ -228,12 +224,6 @@ assign(RouterProto, {
 		let ctx = this._contextValue;
 		const { children, onChange } = this.props;
 		const { url } = this.state;
-		console.log({
-			ctx,
-			url,
-			children,
-			onChange
-		})
 
 		let active = this._getMatchingChild(Children.toArray(children), url);
 		let matches, current;
